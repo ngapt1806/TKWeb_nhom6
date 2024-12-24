@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ đồ Website </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="breadcrumb">
+    <a href="#">Trang chủ</a> &gt;&gt; <span>Sơ đồ Website</span>
+</nav>
+    <div class="container">
+      <h1 class="policy-title">Sơ đồ Website</h1>
+          <h2>
+            Tổng quan website
+          </h2>
+          <img src="/Images/tongquanmenu.PNG" alt="Sơ đồ tổng quan về menu Website">
+          <h3>
+            Phần chân trang
+          </h3>
+          <img src="/Images/chantrang.PNG" alt="Sơ đồ chân trang">
+          <h3>
+            Phần chi tiết
+          </h3>
+          <p>
+          *Vòng lắc
+          </p>
+          <img src="/Images/vonglac.PNG" alt="Sơ đồ chi tiết vòng lắc">
+          <p>
+            *Nhẫn
+            </p>
+            <img src="/Images/nhan.PNG" alt="Sơ đồ chi tiết nhẫn">
+            <p>
+              *Bông tai
+              </p>
+              <img src="/Images/bongtai.PNG" alt="Sơ dồ chi tiết bông tai">
+              <p>
+                *Dây chuyền 
+                  </p>
+                  <img src="/Images/daychuyen.PNG" alt="Sơ đồ chi tiết dây truyềntruyền">
+                  <p>
+                    *Quà tặng 
+                    </p>
+                    <img src="/Images/quatang.PNG" alt="Sơ đồ chi tiết quà tặng ">
+                    <p>
+                      *Trang sức bộ 
+                      </p>
+                      <img src="/Images/trangsucbo.PNG" alt="Sơ đồ chi tiết trang sức bộ ">
+                      <p>
+                        *Phụ kiện 
+                        </p>
+                        <img src="/Images/phukien.PNG" alt="Sơ đồ chi tiết phụ kiện ">
+               
+                </div>
+</body>
+ <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f9f9f9;
+            }
+          
+            .features-section {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              padding: 20px;
+              background-color: #fff;
+              border-top: 2px solid #ddd;
+              border-bottom: 2px solid #ddd;
+            }
+          
+            .feature {
+              text-align: center;
+              max-width: 200px;
+            }
+          
+            .feature img {
+              width: 100px;
+              height: 100px;
+              margin-bottom: 10px;
+            }
+          
+            .feature h3 {
+              font-size: 16px;
+              color: #333;
+              margin-bottom: 8px;
+            }
+          
+            .feature p {
+              font-size: 14px;
+              color: #666;
+            }
+          </style>
+          </head>
+          
+          <body>
+            <section class="features-section">
+              <div class="feature">
+                <img src="../Images/hailongkhachhang.jpg" alt="Khách hàng hài lòng">
+                <h3>KHÁCH HÀNG HÀI LÒNG</h3>
+                <p>Đặt sự hài lòng của khách hàng là ưu tiên số 1 trong mọi suy nghĩ và hành động.</p>
+              </div>
+              <div class="feature">
+                <img src="../Images/chatluongcaocap.jpg" alt="Chất lượng cao cấp">
+                <h3>CHẤT LƯỢNG CAO CẤP</h3>
+                <p>Mọi sản phẩm đều được thiết kế và chế tác bởi các nghệ nhân hàng đầu.</p>
+              </div>
+              <div class="feature">
+                <img src="../Images/doitra.jpg" alt="Đổi trả dễ dàng">
+                <h3>ĐỔI TRẢ DỄ DÀNG</h3>
+                <p>Đổi trả sản phẩm trong vòng 10 ngày. Hoàn tiền nếu không hài lòng.</p>
+              </div>
+              <div class="feature">
+                <img src="../Images/hotronhiettinh.jpg" alt="Hỗ trợ nhiệt tình">
+                <h3>HỖ TRỢ NHIỆT TÌNH</h3>
+                <p>Tất cả câu hỏi đều được các chuyên viên tư vấn, giải đáp kỹ càng.</p>
+              </div>
+            </section>
+          </body>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    background-color: #f9f9f9;
+  }
+
+  /* Biểu tượng chuông */
+  .notification-icon {
+    position: fixed;
+    /* Cố định vị trí */
+    bottom: 20px;
+    /* Cách đáy 20px */
+    right: 20px;
+    /* Cách phải 20px */
+    background-color: #f28c8c;
+    /* Màu nền */
+    border-radius: 50%;
+    /* Bo tròn thành hình tròn */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .notification-icon img {
+    width: 60px;
+    /* Kích thước ảnh */
+    height: 60px;
+  }
+
+  .notification-icon:hover {
+    transform: scale(1.1);
+    /* Tăng kích thước khi hover */
+  }
+
+  .menu {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    animation: fadeIn 0.3s;
+  }
+
+  .menu-header {
+    background-color: #e3a2a2 ;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  .menu-item a{
+    color: black ; 
+    text-decoration: none ;
+  }
+
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+
+  .menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+
+  .menu-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .notification-icon {
+    font-size: 50px;
+    animation: heartbeat 1.5s infinite;
+  }
+</style>
+</head>
+
+<body>
+<!-- Biểu tượng chuông -->
+<div class="notification-icon" onclick="toggleContactMenu()">
+  <img src="/Images/cropped_phone_icon.png" alt="Notification Bell">
+</div>
+
+<!-- Menu thông tin -->
+<div class="menu" id="info-menu">
+  <div class="menu-header">Rất Hân Hạnh Được Phục Vụ Bạn</div>
+  <div class="menu-item">
+    <a href="https://www.facebook.com/profile.php?id=61569423735143" target="_blank" class="menu-item">
+      <img src="/Images/facebook.jpg" alt="Facebook">
+      Facebook
+    </a>
+  </div>
+  <div class="menu-item">
+    <a href="https://www.instagram.com/linus_jewelry/" target="_blank" class="menu-item">
+      <img src="/Images/instagram.jpg" alt="IG">
+    </a>
+    Instagram
+  </div>
+  <div class="menu-item">
+    <a href="tel:0355870959" class="menu-item">
+      <img src="/Images/goituvanmienphi.jpg" alt="Phone">
+      Gọi tư vấn miễn phí
+    </a>
+  </div>
+  <div class="menu-item">
+    <a href="linusjewelrycskh@gmail.com" class="menu-item">
+      <img src="/Images/goilai.jpg" alt="Callback">
+      Yêu cầu gọi lại
+    </a>
+  </div>
+</div>
+</body>
+<script>
+// Hàm để bật/tắt menu liên lạc
+function toggleContactMenu() {
+  const contactMenu = document.getElementById('info-menu');
+  if (contactMenu.style.display === 'block') {
+    contactMenu.style.display = 'none';
+  } else {
+    contactMenu.style.display = 'block';
+  }
+}
+
+// Đóng menu nếu người dùng click ra ngoài
+window.addEventListener('click', function (event) {
+  const contactMenu = document.getElementById('info-menu');
+  const notificationIcon = document.querySelector('.notification-icon');
+  if (!notificationIcon.contains(event.target) && !contactMenu.contains(event.target)) {
+    contactMenu.style.display = 'none';
+  }
+});
+</script>
+  <body>
+    <footer>
+      <div class="footer-container">
+          <div class="footer-section">
+              <h4>Về Chúng Tôi</h4>
+              <ul>
+                  <li><a href="/Vechungtoi/i.html">Về Linus</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>Chính sách hỗ trợ </h4>
+              <ul>
+                  <li><a href="/Chinhsachbaomat/b.html">Chính sách bảo mật </a></li>
+                  <li><a href="/Chinhsachvanchuyen/c.html">Chính sách vận chuyển </a></li>
+                  <li><a href="/Chinhsachdoitra/d.html">Chính sách đổi trả & bảo hành </a></li>
+                  <li><a href="/Cachthucbaoquan/e.html">Cách thức bảo quản </a></li>
+                  <li><a href="/Cauhoithuonggap/f.html">Câu hỏi thường gặp </a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>Liên Hệ</h4>
+              <p>
+                  <a href="tel:+84123456789" class="contact-link">
+                      <i class="fas fa-phone-alt"></i> Số điện thoại: +84 123 456 789
+                  </a>
+              </p>
+              <p>
+                  <a href="mailto:info@example.com" class="contact-link">
+                      <i class="fas fa-envelope"></i> Email: Linusjewelrycskh@gmail.com
+                  </a>
+              <p>
+                  <a href="https://www.google.com/maps/place/12+P.+Ch%C3%B9a+B%E1%BB%99c,+Quang+Trung,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i+100000,+Vi%E1%BB%87t+Nam/@21.0078382,105.8253805,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ac806cfc0845:0x3848505bd3b9490f!8m2!3d21.0078332!4d105.8279554!16s%2Fg%2F11csjfl69g?hl=vi-VN&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                  <i class="fas fa-map-marker-alt icon"></i> Địa chỉ: 12 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội
+              </a></p>
+          </div>
+          <div class="footer-section social-media">
+              <h4>Kết Nối Với Chúng Tôi</h4>
+              <p>
+              <a href="https://www.facebook.com/people/Linusjewelry/61569423735143/" target="_blank" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>Facebook
+              </a> 
+              </p>
+              <p>
+              <a href="https://www.instagram.com/linus_jewelry?igsh=MWYyOTF1dzUzcWZnYw%3D%3D" target="_blank" class="social-icon">
+                  <i class="fab fa-instagram"></i>Instagram
+              </a>
+              </p>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Trang Sức Cao Cấp Linus. All Rights Reserved.</p>
+      </div>
+  </footer>
+  </body>
+</html>
