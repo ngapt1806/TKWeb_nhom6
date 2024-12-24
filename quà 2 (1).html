@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quà 2</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    .breadcrumb {
+    padding: 10px 20px;
+    background: #cfc8ca;
+    border-bottom: 1px solid #1e0e0e;
+    /* viền dưới */
+  }
+  .breadcrumb a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+    /* màu đậm hơn khi di chuột */
+  }
+    .product-container {
+    display: flex;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+
+    .product-images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 700px;
+    }
+
+    .product-images-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    }
+    .product-details {
+    flex: 1;
+    padding: 20px;
+    
+    }
+
+    .product-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+
+    .line {
+            margin: 10px 0;
+            width: 30%;
+            border-top: 1px solid #aaa;
+        }
+
+    .product-info {
+    display: none; 
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+        }
+
+        .toggle-button {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+        }
+
+    .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c71585;
+    margin-bottom: 20px;
+    }
+
+    .size-selector {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+
+    .buttons {
+            margin-top: 5px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .buttons button:hover {
+            background-color: #444;
+        }
+    .wishlist {
+    margin-top: 20px;
+    text-align: left;
+    }
+
+    .wishlist a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 14px;
+    }
+
+    .wishlist a:hover {
+    text-decoration: underline;
+    }
+    .policy {
+            margin-top: 30px;
+        }
+
+        .policy h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .policy p {
+            font-size: 14px;
+            color: #555;
+        }
+        /* Bố cục danh sách sản phẩm */
+    .product-list {
+    max-width: 900px;
+    margin: 0px auto;
+    background: #fff;
+    padding: 0px;
+    border-radius: 20px;
+    }
+
+    .product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    }
+
+    /* Điều chỉnh số lượng */
+    .quantity-control {
+   display: flex;
+   align-items: center;
+    }
+
+    .quantity-control button {
+    width: 30px;
+    height: 30px;
+   background: #ddd;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    }
+
+    .quantity-control button:hover {
+    background: #ccc;
+    }
+
+    .quantity-control .quantity {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="breadcrumb">
+      <a href="#">Trang chủ</a> >
+    <a href="./trang quà tặng.html">Trang quà tặng</a> > <span>Lắc tay bạc nữ "Sakura and Butterfly" đá năng lượng thạch anh hồng</span>
+  </div>
+    <div class="product-container">
+        <div class="product-images-grid">
+            <img src="images/quà1.webp" alt="Ảnh sản phẩm 1">
+            <img src="images/quà11.webp" alt="Ảnh sản phẩm 2">
+            <img src="images/quà12.webp" alt="Ảnh sản phẩm 3">
+            <img src="images/quà13.webp" alt="Ảnh sản phẩm 4">
+        </div>
+        <div class="product-details">
+            <h1>Lắc tay bạc nữ "Sakura and Butterfly" đá năng lượng thạch anh hồng </h1>
+            <P>LINUS_423987</P>
+            <P></P>
+            <p class="product-price" style="display: flex; align-items: center; gap: 10px;">
+              <span style="text-decoration: line-through; color: gray; font-size: 14px;">1.039.000₫</span>
+              <span style="color: red; font-weight: bold; font-size: 16px;">903.000₫</span>
+            </p>
+            <label for="size">Chọn kích thước:</label>
+            <select id="size" class="size-selector">
+                <option value="onesize">One Size</option>
+            </select>
+            <div class="product-details">
+                <h2 class="toggle-button">Chi tiết sản phẩm</h2>
+                <div class="line"></div>
+                <div class="product-info">
+                    <p>
+                        Lắc tay bạc nữ "Sakura and Butterfly" là món trang sức tinh tế kết hợp giữa vẻ đẹp mềm mại của hoa anh đào và cánh bướm. Được chế tác từ bạc cao cấp, lắc tay được điểm xuyết bằng đá năng
+                         lượng thạch anh hồng, mang lại sự thanh lịch, nữ tính và ý nghĩa phong thủy, tượng trưng cho tình yêu và sự dịu dàng. Phù hợp để làm quà tặng ý nghĩa hoặc phụ kiện hoàn hảo cho mọi dịp.
+                        <p>Em nó rất phù hợp để làm món quà trong các dịp sinh nhật, valentine, giáng sinh noel, 8/3, 20/10, các ngày kỷ niệm, ngày cưới, lễ tết,… cho người yêu, bạn bè,…
+                         Chắc chắn bạn cũng như bất cứ cô gái, chàng trai nào cũng muốn mình trở thành chủ nhân của chiếc hộp quà tặng đựng trang sức hàng hiệu sành điệu này đấy!</p>
+                </div>    
+            </div>
+           
+            <div class="buttons">
+                <button>Mua Ngay</button>
+                <button>Thêm Vào Giỏ</button>
+            </div>
+            <div class="wishlist">
+                <a href="#">Lưu vào danh mục yêu thích</a>
+            </div>
+            <div class="policy">
+                <h3>Chính sách giao hàng & đổi trả</h3>
+                <p>Hỗ trợ đổi trả trong 7 ngày và giao hàng toàn quốc.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelector('.toggle-button').addEventListener('click', function () {
+        const productInfo = document.querySelector('.product-info');
+        if (productInfo.style.display === 'none' || productInfo.style.display === '') {
+            productInfo.style.display = 'block';
+        } else {
+            productInfo.style.display = 'none';
+        }
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Tìm tất cả các nút tăng/giảm và input số lượng
+      const decreaseButtons = document.querySelectorAll(".btn-decrease");
+      const increaseButtons = document.querySelectorAll(".btn-increase");
+      const quantityInputs = document.querySelectorAll(".quantity");
+    
+      // Xử lý nút giảm
+      decreaseButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          let quantity = parseInt(quantityInputs[index].value);
+          // Cho phép giảm về 0
+          if (quantity > 0) {
+            quantityInputs[index].value = quantity - 1;
+          }
+        });
+      });
+    
+      // Xử lý nút tăng
+      increaseButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          let quantity = parseInt(quantityInputs[index].value);
+          quantityInputs[index].value = quantity + 1;
+        });
+      });
+    
+      // Đảm bảo số lượng là số nguyên hợp lệ khi nhập tay
+      quantityInputs.forEach((input) => {
+        input.addEventListener("input", (event) => {
+          let value = parseInt(event.target.value);
+          // Nếu nhập sai hoặc giá trị âm, đặt lại về 0
+          if (isNaN(value) || value < 0) {
+            event.target.value = 0;
+          }
+        });
+      });
+    });
+</script>
+
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+
+  /* dải phân cách */
+  .divider {
+    display: flex;
+    /* bố cục linh hoạt */
+    align-items: center;
+    justify-content: center;
+    /* tiêu đề nàm giữa dòng kẻ*/
+    margin: 40px 0;
+  }
+
+  /*Tạo hai phần tử giả (pseudo-elements) xuất hiện trước 
+    và sau nội dung chính của .divider. Chúng sẽ đóng vai trò 
+    là hai đường ngang hai bên.*/
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #070101;
+    margin: 0 10px;
+  }
+
+  .divider h2 {
+    margin: 0;
+    /*Loại bỏ khoảng cách mặc định của thẻ <h2> để tiêu đề không bị đẩy xa khỏi vị trí căn giữa*/
+    font-size: 1.5em;
+  }
+
+  .product-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .product-card {
+    background-color: #f3e5e5;
+    border: 1px solid #ddd;
+    /* Đặt viền mỏng màu xám nhạt quanh mỗi sản phẩm */
+    width: calc(25% - 30px);
+    /* 4 sản phẩm mỗi hàng */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+    /* Bo góc các sản phẩm để tạo hình tròn nhẹ */
+    overflow: hidden;
+    /* Đảm bảo nội dung không tràn ra ngoài viền của sản phẩm */
+    object-fit: cover;
+  }
+
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .product-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c71585;
+  }
+
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .default-img {
+    opacity: 1;
+    /* Hiển thị mặc định */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .hover-img {
+    opacity: 0;
+    /* Ẩn ảnh khi không hover */
+
+    top: 0;
+    left: 0;
+  }
+
+  .image-container:hover .default-img {
+        opacity: 0; /* Ẩn ảnh mặc định khi hover */
+        transform: scale(1); /* Không zoom ảnh mặc định */
+        }
+    
+    .image-container:hover .hover-img {
+        opacity: 1; /* Hiển thị ảnh hover */
+        transform: scale(1.1);
+    /* Phóng to ảnh 10% */
+        }
+
+  @media (max-width: 885px) {
+    .product-card {
+      width: calc(100% / 3 - 30px);
+    }
+  }
+
+  @media (max-width: 750px) {
+    .product-card {
+      width: calc(50% - 30px);
+    }
+  }
+
+  @media (max-width: 510px) {
+    .product-card {
+      width: calc(100% - 30px - 60px);
+    }
+  }
+</style>
+</head>
+
+<body>
+<div class="divider">
+       <h2>SẢN PHẨM ĐỀ XUẤT</h2>
+     </div>
+  <div class="product-container">
+    <div class="product-card">
+      <div class="image-container">
+        <a href="./quà1.html" style="display: block; width: 100%;">
+          <img src="images/sp đề xuất.webp" alt="Default Image" class="default-img">
+          <img src="images/tt đề xuất.webp" alt="Hover Image" class="hover-img">
+        </a>
+      </div>
+      <p class="product-name">Bộ trang sức tua rua thả nước đính kim cương </p>
+      <p class="product-code">LINUS_892563</p>
+      <p class="product-price">1.290.000₫</p>
+      
+    </div>
+    
+    <div class="product-card">
+      <div class="image-container">
+        <a href="./quà 2.html" style="display: block; width: 100%;">
+          <img src="images/quà1.webp" alt="Default Image" class="default-img">
+          <img src="images/quà11.webp" alt="Hover Image" class="hover-img"></a>
+      </div>
+      <p class="product-name">Lắc tay bạc nữ "Sakura and Butterfly" đá năng lượng thạch anh hồng </p>
+      <p class="product-code">LINUS_423987</p>
+      <p class="product-price">903.000₫</p>
+
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <a href="./phụ kiện 2.html" style="display: block; width: 100%;">
+          <img src="images/pk3.jpg" alt="Default Image" class="default-img">
+          <img src="images/pk31.jpg" alt="Hover Image" class="hover-img"></a>
+      </div>
+      <p class="product-name">Hộp quà tặng trang sức đóng mở đèn Led nai con hoa hồng sáp </p>
+      <p class="product-code">LINUS_334929</p>
+      <p class="product-price">852.000₫</p>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <a href="#" style="display: block; width: 100%;">
+          <img src="images/pk4.jpg" alt="Default Image" class="default-img">
+          <img src="images/pk41.jpg" alt="Hover Image" class="hover-img"></a>
+      </div>
+      <p class="product-name"></p>Hộp quà tặng đẹp đựng trang sức hoa hồng sáp dạng ngăn Tesoro </p>
+      <p class="product-code">LINUS_879955</p>
+      <p class="product-price">512.000₫</p>
+    </div>
+  </div>
+</body>
+ <head>
+    <style>
+      
+        /* Tổng quan */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .review-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 50px;
+        max-width: 2000px;
+        margin: 20 auto;
+        background-color: #fff;
+      }
+      
+      h2, h3 {
+        margin: 0;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      p {
+        margin: 5px 0;
+        color: #666;
+      }
+      
+      /* Phần bên trái */
+      .left-review {
+        flex: 1;
+      }
+      
+      .overall-rating {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+      
+      .rating-star {
+        display: flex;
+        align-items: center;
+      }
+      
+      .big-star {
+        font-size: 40px;
+        color: #f28c8c;
+      }
+      
+      .rating-score {
+        font-size: 36px;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+      
+      .total-reviews {
+        font-size: 14px;
+        color: #888;
+      }
+      
+      .rating-breakdown {
+        margin-top: 20px;
+      }
+      
+      .rating-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      
+      .stars {
+        font-size: 14px;
+        color: #f28c8c;
+        width: 60px;
+      }
+      
+      .bar {
+        flex: 0 0 150px; 
+        height: 6px;
+        background: #ddd;
+        border-radius: 3px;
+        margin: 0 10px;
+        position: relative;
+      }
+      
+      .filled-bar {
+        height: 100%;
+        width: 0%;
+        background: #f28c8c;
+        border-radius: 3px;
+      }
+      
+      .count {
+        font-size: 14px;
+        color: #666;
+      }
+      
+      /* Phần bên phải */
+      .right-review {
+        flex: 0.5;
+        text-align: center;
+      }
+      
+      .star-input {
+        display: inline-flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      
+      .star {
+        font-size: 30px;
+        color: #ccc;
+        cursor: pointer;
+      }
+      
+      .star:hover,
+      .star:hover ~ .star {
+        color: #f28c8c;
+      }
+      
+      .login-required {
+        font-size: 14px;
+        color: #888;
+        margin-top: 10px;
+      }
+      
+      .first-review {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+      }
+      
+      .first-review:hover {
+        text-decoration: underline;
+      }
+      </style>
+</head>
+      <body>
+        <div class="review-container">
+          <!-- Phần bên trái: Tổng quan đánh giá -->
+          <div class="left-review">
+            <h2>Đánh giá & Nhận xét</h2>
+            <div class="overall-rating">
+                <div class="rating-container">
+                    <span class="big-star">★</span>
+                    <span class="rating-score">0.0</span>
+                    <p class="total-reviews">0 đánh giá</p>
+                </div>
+            </div>
+            <div class="rating-breakdown">
+              <div class="rating-row">
+                <span class="stars">★★★★★</span>
+                <div class="bar">
+                  <div class="filled-bar" style="width: 0%;"></div>
+                </div>
+                <span class="count">0</span>
+              </div>
+              <div class="rating-row">
+                <span class="stars">★★★★☆</span>
+                <div class="bar">
+                  <div class="filled-bar" style="width: 0%;"></div>
+                </div>
+                <span class="count">0</span>
+              </div>
+              <div class="rating-row">
+                <span class="stars">★★★☆☆</span>
+                <div class="bar">
+                  <div class="filled-bar" style="width: 0%;"></div>
+                </div>
+                <span class="count">0</span>
+              </div>
+              <div class="rating-row">
+                <span class="stars">★★☆☆☆</span>
+                <div class="bar">
+                  <div class="filled-bar" style="width: 0%;"></div>
+                </div>
+                <span class="count">0</span>
+              </div>
+              <div class="rating-row">
+                <span class="stars">★☆☆☆☆</span>
+                <div class="bar">
+                  <div class="filled-bar" style="width: 0%;"></div>
+                </div>
+                <span class="count">0</span>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Phần bên phải: Đánh giá sản phẩm -->
+          <div class="right-review">
+            <h3>Đánh giá sản phẩm</h3>
+            <div class="star-input">
+              <span class="star">☆</span>
+              <span class="star">☆</span>
+              <span class="star">☆</span>
+              <span class="star">☆</span>
+              <span class="star">☆</span>
+            </div>
+            <p class="login-required">Bạn cần đăng nhập để nhận xét và đánh giá sản phẩm</p>
+            <a href="#" class="first-review">Hãy là người đầu tiên đánh giá sản phẩm!</a>
+          </div>
+        </div>
+      </body>
+  <script>
+     // Chọn tất cả các phần tử sao
+  const stars = document.querySelectorAll('.star');
+  let currentRating = 0;
+
+  stars.forEach((star, index) => {
+    // Xử lý sự kiện khi di chuột qua
+    star.addEventListener('mouseover', () => {
+      highlightStars(index + 1);
+    });
+
+    // Xử lý sự kiện khi nhấp vào
+    star.addEventListener('click', () => {
+      currentRating = index + 1;
+      highlightStars(currentRating);
+      console.log(`Bạn đã đánh giá: ${currentRating} sao`);
+    });
+
+    // Khôi phục trạng thái khi không di chuột
+    star.addEventListener('mouseout', () => {
+      highlightStars(currentRating);
+    });
+  });
+
+  // Hàm để làm nổi bật số sao
+  function highlightStars(rating) {
+    stars.forEach((star, index) => {
+      if (index < rating) {
+        star.style.color = '#f28c8c'; // Làm sáng các sao được chọn
+      } else {
+        star.style.color = '#ccc'; // Để các sao còn lại nhạt đi
+      }
+    });
+  }
+  </script>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .features-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 2px solid #ddd;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .feature img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <section class="features-section">
+        <div class="feature">
+            <img src="images/mặt cười.jpg" alt="Khách hàng hài lòng">
+            <h3>KHÁCH HÀNG HÀI LÒNG</h3>
+            <p>Đặt sự hài lòng của khách hàng là ưu tiên số 1 trong mọi suy nghĩ và hành động.</p>
+        </div>
+        <div class="feature">
+            <img src="images/chứng chỉ.png" alt="Chất lượng cao cấp">
+            <h3>CHẤT LƯỢNG CAO CẤP</h3>
+            <p>Mọi sản phẩm đều được thiết kế và chế tác bởi các nghệ nhân hàng đầu.</p>
+        </div>
+        <div class="feature">
+            <img src="images/đổi trả.png" alt="Đổi trả dễ dàng">
+            <h3>ĐỔI TRẢ DỄ DÀNG</h3>
+            <p>Đổi trả sản phẩm trong vòng 10 ngày. Hoàn tiền nếu không hài lòng.</p>
+        </div>
+        <div class="feature">
+            <img src="images/hỗ trợ.png" alt="Hỗ trợ nhiệt tình">
+            <h3>HỖ TRỢ NHIỆT TÌNH</h3>
+            <p>Tất cả câu hỏi đều được các chuyên viên tư vấn, giải đáp kỹ càng.</p>
+        </div>
+    </section>
+    </body>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        position: relative;
+        background-color: #f9f9f9;
+      }
+    
+      /* Biểu tượng chuông */
+      .notification-icon {
+        position: fixed;
+        /* Cố định vị trí */
+        bottom: 20px;
+        /* Cách đáy 20px */
+        right: 20px;
+        /* Cách phải 20px */
+        background-color: #f28c8c;
+        /* Màu nền */
+        border-radius: 50%;
+        /* Bo tròn thành hình tròn */
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+    
+      .notification-icon img {
+        width: 60px;
+        /* Kích thước ảnh */
+        height: 60px;
+      }
+    
+      .notification-icon:hover {
+        transform: scale(1.1);
+        /* Tăng kích thước khi hover */
+      }
+    
+      .menu {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        display: none;
+        animation: fadeIn 0.3s;
+      }
+    
+      .menu-header {
+        background-color: #e3a2a2 ;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+      }
+    
+      .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+      }
+      .menu-item a{
+        color: black ; 
+        text-decoration: none ;
+      }
+    
+      .menu-item:last-child {
+        border-bottom: none;
+      }
+    
+      .menu-item img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+    
+    
+      .menu-item:hover {
+        background-color: #f0f0f0;
+      }
+    
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1);
+        }
+    
+        50% {
+          transform: scale(1.2);
+        }
+    
+        100% {
+          transform: scale(1);
+        }
+      }
+    
+      .notification-icon {
+        font-size: 50px;
+        animation: heartbeat 1.5s infinite;
+      }
+    </style>
+    </head>
+    
+    <body>
+    <!-- Biểu tượng chuông -->
+    <div class="notification-icon" onclick="toggleContactMenu()">
+      <img src="images/gọi đt.jpg" alt="Notification Bell">
+    </div>
+    
+    <!-- Menu thông tin -->
+    <div class="menu" id="info-menu">
+      <div class="menu-header">Rất Hân Hạnh Được Phục Vụ Bạn</div>
+      <div class="menu-item">
+        <a href="⁦https://www.facebook.com/profile.php?id=61569423735143⁩" target="_blank" class="menu-item">
+          <img src="images/fb.jpg" alt="Facebook">
+          Facebook
+        </a>
+      </div>
+      <div class="menu-item">
+        <a href="⁦https://www.instagram.com/linus_jewelry/⁩" target="_blank" class="menu-item">
+          <img src="images/ì.png" alt="IG">
+        </a>
+        Instagram
+      </div>
+      <div class="menu-item">
+        <a href="tel:0355870959" class="menu-item">
+          <img src="images/gọi.png" alt="Phone">
+          Gọi tư vấn miễn phí
+        </a>
+      </div>
+      <div class="menu-item">
+        <a href="linusjewelrycskh@gmail.com" class="menu-item">
+          <img src="images/dtt.png" alt="Callback">
+          Yêu cầu gọi lại
+        </a>
+      </div>
+    </div>
+    </body>
+    <script>
+    // Hàm để bật/tắt menu liên lạc
+    function toggleContactMenu() {
+      const contactMenu = document.getElementById('info-menu');
+      if (contactMenu.style.display === 'block') {
+        contactMenu.style.display = 'none';
+      } else {
+        contactMenu.style.display = 'block';
+      }
+    }
+    
+    // Đóng menu nếu người dùng click ra ngoài
+    window.addEventListener('click', function (event) {
+      const contactMenu = document.getElementById('info-menu');
+      const notificationIcon = document.querySelector('.notification-icon');
+      if (!notificationIcon.contains(event.target) && !contactMenu.contains(event.target)) {
+        contactMenu.style.display = 'none';
+      }
+    });
+    </script>
+</html>
