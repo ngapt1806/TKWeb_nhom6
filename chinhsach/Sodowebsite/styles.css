@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #555;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.breadcrumb {
+    font-size: 0.9em;
+    padding: 10px 20px;
+    background-color: #f7e1e1;
+    border-bottom: 1px solid #ddd;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+}
+
+.breadcrumb li {
+    font-size: 14px;
+}
+
+.breadcrumb li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.breadcrumb li a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.breadcrumb li:last-child {
+    font-weight: bold;
+    color: #555;
+}
+.breadcrumb a{
+    color:#0c0c0c;
+    text-decoration:none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+footer {
+    background-color: #f7e1e1;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color:black ;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+    color:#000000;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-section ul li a:hover {
+    color: #020202;
+    text-decoration: underline;
+}
+
+.social-media a {
+    margin-right: 10px;
+    color: #060606;
+    text-decoration: none;
+
+}
+
+.social-media a:hover {
+    color: #000000;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color:#020202;
+    border-top: 1px solid #ccc; /* Dấu gạch ngang */
+    padding: 10px 0; /* Khoảng cách trên/dưới */
+}
+.contact-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-flex; /* Hiển thị icon và text trên cùng dòng */
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa icon và text */
+    transition: color 0.3s;
+}
+
+.contact-link i {
+    font-size: 1em; /* Điều chỉnh kích thước icon */
+    color: #0c0f11; /* Màu biểu tượng */
+}
+
+.contact-link:hover {
+    color: #1f2123;
+    text-decoration: underline;
+}
+footer a {
+    color: white;
+    text-decoration: none;  /* Tắt dấu gạch dưới mặc định */
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;  /* Hiển thị dấu gạch dưới khi di chuột */
+}
+
+footer .icon {
+    margin-right: 10px;
+}
+
+/* Chỉnh màu cho địa chỉ thành màu đen */
+footer a[href*="maps"] {
+    color: black;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-flex; /* Căn văn bản và biểu tượng theo hàng ngang */
+    align-items: center;  /* Căn giữa biểu tượng và chữ */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icon {
+    font-size: 1em; /* Kích thước biểu tượng */
+    margin: 0 10px;
+    color: rgb(15, 14, 14); 
+    transition: color 0.3s ease; /* Hiệu ứng mượt khi thay đổi màu */
+}
+
+footer .social-icon i {
+    margin-right: 5px; /* Khoảng cách giữa biểu tượng và chữ */
+    
+}
+
+footer .social-icon:hover {
+    color: #121112; 
+}
+h1.policy-title {
+    position: relative;
+    text-align: center;
+    margin: 40px 0; /* Tăng khoảng cách trên và dưới tiêu đề */
+    font-size: 28px; /* Tăng kích thước font để nổi bật */
+    font-weight: bold;
+  }
+  
+  h1.policy-title::before,
+  h1.policy-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 29%; /* Giảm chiều rộng của đường kẻ ngang */
+    height: 2px; /* Tăng độ dày để dễ nhìn */
+    background-color: #ccc; /* Đổi màu thành xám nhạt để mềm mại hơn */
+  }
+  
+  h1.policy-title::before {
+    left: 0;
+  }
+  
+  h1.policy-title::after {
+    right: 0;
+  }
