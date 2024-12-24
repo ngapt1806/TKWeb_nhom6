@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Vòng - Lắc Cao Cấp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Liên kết Bootstrap Icons -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<style>
+  /* Header */
+
+header {
+    background-color: #f8d7e3; /* Màu hồng nhạt */
+    padding: 1rem 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng */
+}
+
+.navbar-brand {
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    align-items: center; /* Căn giữa nội dung theo trục dọc */
+    gap: 10px; /* Khoảng cách giữa các phần tử bên trong */
+    text-decoration: none; /* Xóa gạch chân liên kết */
+    justify-content: flex-start;
+    padding-left: 0; /* Loại bỏ khoảng cách bên trái nếu có */
+    margin-left: 0; /* Đảm bảo không có lề bên trái */
+}
+
+.navbar-brand .img {
+    height: 60px; /* Kích thước chiều cao của logo chính */
+    width: auto; /* Tự động điều chỉnh chiều rộng theo tỷ lệ */
+}
+
+.navbar-brand .secondary-image {
+    height: 60px; /* Kích thước chiều cao của ảnh phụ */
+    width: auto; /* Tự động điều chỉnh chiều rộng theo tỷ lệ */
+    border-radius: 5px; /* Tùy chọn: Bo tròn góc ảnh nếu cần */
+    margin-left: 5px; /* Khoảng cách giữa logo và ảnh phụ */
+}
+
+.navbar-brand:hover {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng khi rê chuột */
+}
+
+
+.icon {
+    font-size: 16px;
+    color: #000;
+    margin: 0 12px;
+}
+
+.icon:hover {
+    color: #e74c3c; /* Đổi màu khi hover */
+}
+
+.search-bar {
+    max-width: 300px;
+    margin-right: 10px;
+}
+.cart-icon{
+    position: relative;
+}
+.cart-icon span{
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    border-radius:50%;
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600 ;
+    position: absolute;
+    right: -5px;
+    top:-5px;
+}
+</style>
+<body>
+   <!-- Header -->
+   <header>
+    <div class="container d-flex justify-content-between align-items-center" style="height: 15px;">
+        <!-- Menu bên trái -->
+        <div class="d-flex">
+            <i class="bi bi-telephone icon"></i> 
+            <i class="bi bi-shop icon"></i> <!-- Biểu tượng cửa hàng -->
+        </div>
+
+        <!-- Logo ở giữa -->
+        <a href="index.html" class="navbar-brand">
+            <img src="images/logo.jpg" alt="Linus Jewelry Logo" class="img"> <!-- Đường dẫn và kích thước logo -->
+            <img src="images/lgo.jpg" alt="Secondary Image" class="secondary-image"> <!-- Ảnh thêm -->
+        </a>
+        
+
+        <!-- Menu bên phải -->
+        <div class="d-flex align-items-center">
+            <div class="input-group search-bar">
+                <input type="text" class="form-control" placeholder="Tìm kiếm Linus">
+                <button class="btn" type="button">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <a href="login.html">
+                <i class="bi bi-person icon"></i>
+            </a>
+            <i class="bi bi-heart icon"></i>
+            <div class="cart-icon">
+                    <i class="bi bi-cart4 icon"></i>
+                    <span>0</span>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #ebe2e5;
+    /* Màu hồng nhạt */
+  }
+
+  h2 {
+    color: #070501;
+    ;
+  }
+
+  /* thẻ điều hướng */
+  .breadcrumb {
+    padding: 10px 20px;
+  height: 10px;
+   
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+    /* màu đậm hơn khi di chuột */
+  }
+
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    /* padding: 40px 20px; */
+    background-color: #d6def6;
+    /* Nền hồng nhạt */
+    overflow: hidden;
+    text-align: center;
+    /* Giúp ẩn phần video vượt ra ngoài chiều cao của phần tử */
+
+  }
+
+  .background-video {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Đảm bảo video bao phủ toàn bộ phần tử mà không bị méo */
+    z-index: -1;
+    /* Đặt video ở dưới cùng, phía dưới nội dung */
+  }
+
+  /* Nội dung trên video */
+
+
+  .header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: Walbaum;
+    font-style: italic;
+    color: #12110f;
+  }
+
+  .header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+    font-style: italic;
+    font-family: monospace
+  }
+
+
+  /* dải phân cách */
+  .divider {
+    display: flex;
+    /* bố cục linh hoạt */
+    align-items: center;
+    justify-content: center;
+    /* tiêu đề nàm giữa dòng kẻ*/
+    margin: 40px 0;
+  }
+
+  /*Tạo hai phần tử giả (pseudo-elements) xuất hiện trước 
+    và sau nội dung chính của .divider. Chúng sẽ đóng vai trò 
+    là hai đường ngang hai bên.*/
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #070101;
+    margin: 0 10px;
+  }
+
+  .divider h2 {
+    margin: 0;
+    /*Loại bỏ khoảng cách mặc định của thẻ <h2> để tiêu đề không bị đẩy xa khỏi vị trí căn giữa*/
+    font-size: 1.5em;
+  }
+
+
+
+  .product-card {
+    width: calc(25% - 30px);
+    margin: 0 15px;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    /* Đặt viền mỏng màu xám nhạt quanh mỗi sản phẩm */
+    border-radius: 8px;
+    /* Bo góc các sản phẩm để tạo hình tròn nhẹ */
+    overflow: hidden;
+    /* Đảm bảo nội dung không tràn ra ngoài viền của sản phẩm */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Tạo hiệu ứng bóng đổ nhẹ xung quanh sản phẩm */
+    background-color: #f3e5e5;
+    object-fit: cover;
+    /* Đặt màu nền của sản phẩm là màu trắng */
+  }
+
+  .product-card img {
+    width: 100%;
+    /* Đảm bảo hình ảnh sản phẩm chiếm hết chiều rộng của sản phẩm */
+    height: auto;
+    /* Đảm bảo chiều cao của hình ảnh tỉ lệ với chiều rộng */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Thêm hiệu ứng chuyển động và độ sáng */
+  }
+
+  .product-card img:hover {
+
+    transform: scale(1.1);
+    /* Phóng to ảnh 10% */
+    filter: brightness(1.2);
+    /* Tăng độ sáng ảnh */
+  }
+
+
+  .product-info {
+    padding: 15px;
+    /* Thêm khoảng đệm 15px xung quanh nội dung của sản phẩm */
+    text-align: center;
+    /* Căn giữa tất cả nội dung trong phần thông tin sản phẩm */
+  }
+
+  .product-info h3 {
+    font-size: 16px;
+    /* Đặt kích thước chữ của tên sản phẩm là 16px */
+    margin-bottom: 10px;
+    /* Thêm khoảng cách 10px dưới tên sản phẩm */
+    color: #333;
+
+  }
+
+  .product-info .product-code {
+    font-size: 14px;
+    /* Đặt kích thước chữ của mã sản phẩm là 14px */
+    color: #777;
+    /* Đặt màu chữ của mã sản phẩm là màu xám nhạt */
+  }
+
+  .product-info .product-price {
+    font-size: 18px;
+    /* Đặt kích thước chữ của giá sản phẩm là 18px */
+    font-weight: bold;
+    color: #ff1493;
+
+  }
+
+
+
+
+  .color-options {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .color:hover {
+    transform: scale(1.2);
+    /* Phóng to khi di chuột qua */
+  }
+
+  .color.silver {
+    background-color: #c0c0c0;
+  }
+
+  .color.purple {
+    background-color: #800080;
+  }
+
+  .color.blue {
+    background-color: #0000ff;
+  }
+
+  .color.black {
+    background-color: #000
+  }
+
+  .color.pink {
+    background-color: pink
+  }
+
+
+  @media (max-width: 885px) {
+    .product-card {
+      width: calc(100% / 3 - 30px);
+    }
+  }
+
+  @media (max-width: 750px) {
+    .product-card {
+      width: calc(50% - 30px);
+    }
+  }
+
+  @media (max-width: 510px) {
+    .product-card {
+      width: calc(100% - 30px - 60px);
+    }
+  }
+</style>
+
+<body>
+
+  <div class="breadcrumb">
+    <a href="#">Trang chủ</a> > <span>Vòng - Lắc</span>
+  </div>
+
+  <div class="header">
+    <div class="text" style="position: absolute;text-align: center;">
+      <h1><b>VÒNG - LẮC CAO CẤP</b></h1>
+      <p><b>
+          Tô điểm cho đôi tay, đôi chân của bạn bằng những chiếc lắc tay, <br>vòng chân LiLi đẹp tinh xảo, góp phần tăng
+          thêm
+          nét sang trọng và thanh lịch cho mỗi bước đi của bạn.</b>
+      </p>
+    </div>
+    <video muted autoplay loop style=" width: 100%; height: 100%;object-fit: cover; object-position: cen">
+      <source
+        src="https://objects-prod.cdn.chopard.com/video/upload/q_auto/Campaigns/happy-hearts-collection/Mobile/02-Design/02-1-Happy_Hearts-Design--9x16.webm"
+        type="video/mp4">
+    </video>
+  </div>
+  <!-- sp đề xuất -->
+  <div class="divider">
+    <h2>SẢN PHẨM ĐỀ XUẤT</h2>
+  </div>
+  <div class="container" style="margin:0 auto; width: 100%; max-width: 1480px; padding: 0 30px;">
+    <div class="product__list"
+      style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; row-gap: 30px; ">
+      <div class="product-card featured-product">
+        <!-- sp1 -->
+        <a href="./chitietvonglac1.html" style="display: block; width: 100%;">
+          <img src="./images/Lac-tay-bac-nu-ma-bach-kim-dinh-da-CZ-co-4-la-LILI_612672_20.jpg" alt="Lắc tay bạc nữ"></a>
+        <div class="product-info">
+          <!-- Thẻ div chứa thông tin chi tiết về sản phẩm -->
+
+          <h3>Lắc tay bạc nữ mạ bạch kim đính đá CZ có 4 lá</h3>
+          <!-- Tên sản phẩm được đặt trong thẻ h3, đây là tiêu đề của mỗi sản phẩm -->
+
+          <p class="product-code">LINUS_612672</p>
+          <!-- Mã sản phẩm được hiển thị trong thẻ p với lớp là product-code để dễ dàng định dạng -->
+
+          <p class="product-price">816.000đ</p>
+          <!-- Giá sản phẩm được hiển thị trong thẻ p với lớp là product-price để dễ dàng định dạng -->
+
+
+          <div class="color-options">
+            <div class="color silver" title="Màu bạc"></div>
+            <div class="color purple" title="Màu tím"></div>
+            <div class="color blue" title="Màu xanh dương"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- sp2 -->
+      <div class="product-card featured-product">
+        <a href="./chiettietvonglac2.html">
+          <img src="./images/vong-tay-bac-925-dinh-pha-le-swarovski-3.jpg" alt="Lắc tay bạc nữ"></a>
+        <div class="product-info">
+          <h3>Lắc tay bạc đính pha lê Swarovski trái tim</h3>
+          <p class="product-code">LINUS_579467</p>
+          <p class="product-price">901.000đ</p>
+          <div class="color-options">
+            <div class="color pink" title="Màu Hồng"></div>
+            <div class="color silver" title="Màu bạc"></div>
+            <div class="color blue" title="Màu xanh dương"></div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card featured-product">
+        <!-- sp3 -->
+        <a href="./chiettietvonglac3.html">
+          <img src="./images/Lac-chan-bac-nu-dinh-da-CZ-hinh-co-4-la-Mildred-LILI_763298_2.jpg"
+            alt="Lắc tay bạc nữ"></a>
+        <div class="product-info">
+          <h3>Lắc chân bạc nữ đính đá CZ hình cỏ 4 lá Mildred</h3>
+          <p class="product-code">LINUS_763298</p>
+          <p class="product-price">810.000đ</p>
+        </div>
+      </div>
+      <!-- sp4 -->
+      <div class="product-card featured-product">
+        <a href="./chitietvonglac4.html">
+          <img src="./images/Vong-tay-bac-theo-cap-LILI_986852-04.jpg" alt="Lắc tay bạc nữ"></a>
+        <div class="product-info">
+          <h3>Lắc tay bạc cặp đôi tình yêu Forever Love</h3>
+          <p class="product-code">LINUS_986852</p>
+          <p class="product-price"> 1.211.000đ</p>
+          <div class="color-options">
+            <div class="color silver" title="Màu bạc"></div>
+            <div class="color black" title="Màu đen"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<body>
+  <!-- vòng lắc -->
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .filter-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter,
+    .search {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .filter {
+      min-width: 150px;
+    }
+
+    .search {
+      flex-grow: 1;
+    }
+
+    .hide {
+      display: none;
+    }
+  </style>
+  </div>
+  <div class="divider">
+    <h2>VÒNG-LẮC</h2>
+  </div>
+  <div class="container" style="margin:0 auto; width: 100%; max-width: 1480px; padding: 0 30px;">
+    <!-- Thanh lọc và sắp xếp -->
+    <div class="filter-container">
+      <select id="type" class="filter">
+        <option value="all">Loại vòng lắc</option>
+        <option value="vong-tay">Vòng tay</option>
+        <option value="vong-chan">Vòng chân</option>
+        <option value="Charm Pandora">Charm Pandora</option>
+      </select>
+
+      <select id="material" class="filter">
+        <option value="">Chất liệu</option>
+        <option value="Đá quý">Đá quý</option>
+        <option value="bac">Bạc</option>
+      </select>
+
+      <select id="gender" class="filter">
+        <option value="">Giới tính</option>
+        <option value="nu">Nữ</option>
+        <option value="nam">Nam</option>
+        <option value="unisex">Unisex</option>
+      </select>
+
+      <select id="price" class="filter">
+        <option value="">Khoảng giá</option>
+        <option value="low">Dưới 500.000đ</option>
+        <option value="medium">500.000đ - 1.000.000đ</option>
+        <option value="high">Trên 1.000.000đ</option>
+      </select>
+
+      <input type="text" id="search" class="search" placeholder="Tìm kiếm sản phẩm...">
+    </div>
+
+    <!-- Danh sách sản phẩm -->
+    <div class="container" style="margin:0 auto; width: 100%; max-width: 1480px; padding: 0 30px;">
+      <div class="product__list"
+        style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; row-gap: 30px; ">
+        <div class="product-card">
+          <!-- sp1 -->
+          <a href="./chitietvonglac1.html" style="display: block; width: 100%;">
+            <img src="./images/Lac-tay-bac-nu-ma-bach-kim-dinh-da-CZ-co-4-la-LILI_612672_20.jpg" alt="Lắc tay bạc nữ"
+              type="vong-tay" material="bac" gender="nu" price="medium">
+          </a>
+          <div class="product-info">
+            <h3>Lắc tay bạc nữ mạ bạch kim đính đá CZ có 4 lá</h3>
+            <p class="product-code">LINUS_612672</p>
+
+
+            <p class="product-price">816.000đ</p>
+            <div class="color-options">
+              <div class="color silver" title="Màu bạc"></div>
+              <div class="color purple" title="Màu tím"></div>
+              <div class="color blue" title="Màu xanh dương"></div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="product-card">
+          <!-- sp2 -->
+          <a href="./chiettietvonglac2.html">
+            <img src="./images/vong-tay-bac-925-dinh-pha-le-swarovski-3.jpg" alt="Lắc tay bạc nữ" type="vong-tay"
+              material="bac" gender="nu" price="medium"></a>
+          <div class="product-info">
+            <h3>Lắc tay bạc đính pha lê Swarovski trái tim</h3>
+            <p class="product-code">LINUS_579467</p>
+            <p class="product-price">901.000đ</p>
+            <div class="color-options">
+              <div class="color silver" title="Màu bạc"></div>
+              <div class="color blue" title="Màu xanh dương"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <!-- sp3 -->
+          <a href="./chiettietvonglac3.html">
+            <img src="./images/Lac-chan-bac-nu-dinh-da-CZ-hinh-co-4-la-Mildred-LILI_763298_2.jpg" alt="Lắc chân bạc nữ"
+              type="vong-chan" material="bac" gender="nu" price="medium"></a>
+          <div class="product-info">
+            <h3>Lắc chân bạc nữ đính đá CZ hình cỏ 4 lá Mildred</h3>
+            <p class="product-code">LINUS_763298</p>
+            <p class="product-price">810.000đ</p>
+            <div class="color-options">
+              <div class="color silver" title="Màu bạc"></div>
+              <div class="color purple" title="Màu tím"></div>
+            </div>
+          </div>
+        </div>
+        <!-- sp4 -->
+        <div class="product-card">
+          <a href="./chitietvonglac4.html">
+            <img src="./images/Vong-tay-bac-theo-cap-LILI_986852-04.jpg" alt="Lắc tay bạc nữ" type="vong-tay"
+              material="bac" gender="nu" price="low"></a>
+          <div class="product-info">
+            <h3>Lắc tay bạc cặp đôi tình yêu Forever Love</h3>
+            <p class="product-code">LINUS_986852</p>
+            <p class="product-price">1211000đ</p>
+            <div class="color-options">
+              <div class="color silver" title="Màu bạc"></div>
+              <div class="color black" title="Màu đen"></div>
+
+            </div>
+          </div>
+        </div>
+        <!-- sp5 -->
+        <div class="product-card" style="position: relative;">
+          <!-- Nhãn giảm giá -->
+          <div class="discount-badge" style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+            color: white;
+            padding: 5px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 0 0 10px 0;
+            z-index: 10;">
+            -15%
+          </div>
+          <a href="./chitietvong5.html">
+            <img src="./images/5.0.jpg" alt="Lắc chân bạc nữ" type="vong-chan" material="bac" gender="nu" price="medium">
+          </a>
+          <div class="product-info">
+            <h3>Lắc chân bạc nữ thời trang đính đá CZ hình trăng sao Godfrey</h3>
+            <p class="product-code">LINUS_828446</p>
+            <p class="product-price" style="display: flex; align-items: center; gap: 10px;">
+              <span style="text-decoration: line-through; color: gray; font-size: 14px;">970.000₫</span>
+              <span style="color:color: #ff1493;; font-weight: bold; font-size: 16px;">825.000₫</span>
+            </p>
+          </div>
+        </div>
+        
+
+
+      </div>
+    </div>
+  </div>
+  <script src="nhung.js"></script>
+</body>
+
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      position: relative;
+      background-color: #f9f9f9;
+    }
+
+    /* Biểu tượng chuông */
+    .notification-icon {
+      position: fixed;
+      /* Cố định vị trí */
+      bottom: 20px;
+      /* Cách đáy 20px */
+      right: 20px;
+      /* Cách phải 20px */
+      background-color: #f28c8c;
+      /* Màu nền */
+      border-radius: 50%;
+      /* Bo tròn thành hình tròn */
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .notification-icon img {
+      width: 60px;
+      /* Kích thước ảnh */
+      height: 60px;
+    }
+
+    .notification-icon:hover {
+      transform: scale(1.1);
+      /* Tăng kích thước khi hover */
+    }
+
+    .menu {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      display: none;
+      animation: fadeIn 0.3s;
+    }
+
+    .menu-header {
+      background-color: #fb6f92;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      color:#000
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .menu-item img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .menu-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .notification-icon {
+      font-size: 50px;
+      animation: heartbeat 1.5s infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Biểu tượng chuông -->
+  <div class="notification-icon" onclick="toggleContactMenu()">
+    <img src="./images/chuonglinus.jpg" alt="Notification Bell">
+  </div>
+
+  <!-- Menu thông tin -->
+  <div class="menu" id="info-menu">
+    <div class="menu-header">Rất Hân Hạnh Được Phục Vụ Bạn</div>
+    <div class="menu-item">
+      <a href="https://www.facebook.com/profile.php?id=61569423735143" target="_blank" class="menu-item">
+        <img src="./images/fb.jpg" alt="Facebook">
+        Facebook
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="https://www.instagram.com/linus_jewelry/" target="_blank" class="menu-item">
+        <img src="./images/ì.png" alt="IG">
+      </a>
+      Instagram
+    </div>
+    <div class="menu-item">
+      <a href="tel:0355870959" class="menu-item">
+        <img src="./images/dtt.png" alt="Phone">
+        Gọi tư vấn miễn phí
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="linusjewelrycskh@gmail.com" class="menu-item">
+        <img src="./images/gọi.png" alt="Callback">
+        Yêu cầu gọi lại
+      </a>
+    </div>
+  </div>
+</body>
+<script>
+  // Hàm để bật/tắt menu liên lạc
+  function toggleContactMenu() {
+    const contactMenu = document.getElementById('info-menu');
+    if (contactMenu.style.display === 'block') {
+      contactMenu.style.display = 'none';
+    } else {
+      contactMenu.style.display = 'block';
+    }
+  }
+
+  // Đóng menu nếu người dùng click ra ngoài
+  window.addEventListener('click', function (event) {
+    const contactMenu = document.getElementById('info-menu');
+    const notificationIcon = document.querySelector('.notification-icon');
+    if (!notificationIcon.contains(event.target) && !contactMenu.contains(event.target)) {
+      contactMenu.style.display = 'none';
+    }
+  });
+</script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+
+  .features-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .feature {
+    text-align: center;
+    max-width: 200px;
+  }
+
+  .feature img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .feature h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .feature p {
+    font-size: 14px;
+    color: #666;
+  }
+</style>
+</head>
+
+<body>
+  <section class="features-section">
+    <div class="feature">
+      <img src="./images/hailong.jpg" alt="Khách hàng hài lòng">
+      <h3>KHÁCH HÀNG HÀI LÒNG</h3>
+      <p>Đặt sự hài lòng của khách hàng là ưu tiên số 1 trong mọi suy nghĩ và hành động.</p>
+    </div>
+    <div class="feature">
+      <img src="./images/dautich.jpg" alt="Chất lượng cao cấp">
+      <h3>CHẤT LƯỢNG CAO CẤP</h3>
+      <p>Mọi sản phẩm đều được thiết kế và chế tác bởi các nghệ nhân hàng đầu.</p>
+    </div>
+    <div class="feature">
+      <img src="./images/doitra.jpg" alt="Đổi trả dễ dàng">
+      <h3>ĐỔI TRẢ DỄ DÀNG</h3>
+      <p>Đổi trả sản phẩm trong vòng 10 ngày. Hoàn tiền nếu không hài lòng.</p>
+    </div>
+    <div class="feature">
+      <img src="./images/chámoc.jpg" alt="Hỗ trợ nhiệt tình">
+      <h3>HỖ TRỢ NHIỆT TÌNH</h3>
+      <p>Tất cả câu hỏi đều được các chuyên viên tư vấn, giải đáp kỹ càng.</p>
+    </div>
+  </section>
+</body>
+
+<body>
+  <style>
+   . {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    footer {
+      background-color: #f7e1e1;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-section {
+      flex: 1;
+      margin: 10px;
+      min-width: 200px;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: black;
+    }
+
+    .footer-section p,
+    .footer-section ul {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #000000;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-section ul li a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .footer-section ul li a:hover {
+      color: #020202;
+      text-decoration: underline;
+    }
+
+    .social-media a {
+      margin-right: 10px;
+      color: #060606;
+      text-decoration: none;
+
+    }
+
+    .social-media a:hover {
+      color: #000000;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #020202;
+    }
+
+    .contact-link {
+      color: #333;
+      text-decoration: none;
+      font-weight: normal;
+      display: inline-flex;
+      /* Hiển thị icon và text trên cùng dòng */
+      align-items: center;
+      gap: 8px;
+      /* Khoảng cách giữa icon và text */
+      transition: color 0.3s;
+    }
+
+    .contact-link i {
+      font-size: 1em;
+      /* Điều chỉnh kích thước icon */
+      color: #0c0f11;
+      /* Màu biểu tượng */
+    }
+
+    .contact-link:hover {
+      color: #1f2123;
+      text-decoration: underline;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      /* Tắt dấu gạch dưới mặc định */
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      /* Hiển thị dấu gạch dưới khi di chuột */
+    }
+
+    footer .icon {
+      margin-right: 10px;
+    }
+
+    /* Chỉnh màu cho địa chỉ thành màu đen */
+    footer a[href*="maps"] {
+      color: black;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      display: inline-flex;
+      /* Căn văn bản và biểu tượng theo hàng ngang */
+      align-items: center;
+      /* Căn giữa biểu tượng và chữ */
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer .social-icon {
+      font-size: 1em;
+      /* Kích thước biểu tượng */
+      margin: 0 10px;
+      color: rgb(15, 14, 14);
+      transition: color 0.3s ease;
+      /* Hiệu ứng mượt khi thay đổi màu */
+    }
+
+    footer .social-icon i {
+      margin-right: 5px;
+      /* Khoảng cách giữa biểu tượng và chữ */
+
+    }
+
+    footer .social-icon:hover {
+      color: #121112;
+    }
+  </style>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Về Chúng Tôi</h4>
+        <ul>
+          <li><a href="./Vechungtoi/i.html">Về Linus</a></li>
+          <li><a href="./Sodowebsite/k.html">Sơ đồ về Website </a></li>
+
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Chính sách hỗ trợ </h4>
+        <ul>
+          <li><a href="./Chinhsachbaomat/b.html">Chính sách bảo mật </a></li>
+          <li><a href="./Chinhsachvanchuyen/c.html">Chính sách vận chuyển </a></li>
+          <li><a href="./Chinhsachdoitra/d.html">Chính sách đổi trả & bảo hành </a></li>
+          <li><a href="./Cachthucbaoquan/">Cách thức bảo quản </a></li>
+          <li><a href="./Cauhoithuonggap/f.html">Câu hỏi thường gặp </a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Liên Hệ</h4>
+        <p>
+          <a href="tel:+84123456789" class="contact-link">
+            <i class="fas fa-phone-alt"></i> Số điện thoại: +84 123 456 789
+          </a>
+        </p>
+        <p>
+          <a href="mailto:info@example.com" class="contact-link">
+            <i class="fas fa-envelope"></i> Email: Linusjewelrycskh@gmail.com
+          </a>
+        <p>
+          <a href="https://www.google.com/maps/place/12+P.+Ch%C3%B9a+B%E1%BB%99c,+Quang+Trung,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i+100000,+Vi%E1%BB%87t+Nam/@21.0078382,105.8253805,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ac806cfc0845:0x3848505bd3b9490f!8m2!3d21.0078332!4d105.8279554!16s%2Fg%2F11csjfl69g?hl=vi-VN&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank">
+            <i class="fas fa-map-marker-alt icon"></i> Địa chỉ: 12 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội
+          </a>
+        </p>
+      </div>
+      <div class="footer-section social-media">
+        <h4>Kết Nối Với Chúng Tôi</h4>
+        <p>
+          <a href="https://www.facebook.com/people/Linusjewelry/61569423735143/" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i>Facebook
+          </a>
+        </p>
+        <p>
+          <a href="https://www.instagram.com/linus_jewelry?igsh=MWYyOTF1dzUzcWZnYw%3D%3D" target="_blank"
+            class="social-icon">
+            <i class="fab fa-instagram"></i>Instagram
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Trang Sức Cao Cấp Linus. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
