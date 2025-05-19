@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d135579f-d2e6-42b6-af04-33dcd6f1265a" name="Changes" comment="update code">
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/serializable-closure" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/serializable-closure" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psr/log" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/psr/log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/process" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1729682095" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="E:\xampp\php\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/cloudinary/cloudinary_php" />
+      <path value="$PROJECT_DIR$/vendor/cloudinary/transformation-builder-sdk" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/spatie/async" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2iALypEMAS2IjnoKLOqRgToMrkD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/xampp/htdocs/CentBeauty/views/admin/assets/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\PhpStorm 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\CentBeauty\views\admin\assets\img" />
+      <recent name="E:\xampp\htdocs\CentBeauty\views\client" />
+      <recent name="E:\xampp\htdocs\CentBeauty\views\client\components" />
+      <recent name="E:\xampp\htdocs\CentBeauty\assetsv2" />
+      <recent name="E:\xampp\htdocs\CentBeauty\assets\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\CentBeauty\views\client\component_cent" />
+      <recent name="E:\xampp\htdocs\CentBeauty\views\client" />
+      <recent name="E:\xampp\htdocs\Medicare\configs" />
+      <recent name="E:\xampp\htdocs\Medicare\views\admin" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PS-241.15989.102" />
+        <option value="bundled-php-predefined-ba97393d7c68-c76157a7178b-com.jetbrains.php.sharedIndexes-PS-241.15989.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="fixbug">
+      <option name="closed" value="true" />
+      <created>1718879660628</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718879660628</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d135579f-d2e6-42b6-af04-33dcd6f1265a" name="Changes" comment="fixbug" />
+      <created>1718928693989</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718928693989</updated>
+      <workItem from="1718928697276" duration="23259000" />
+      <workItem from="1718982350350" duration="11636000" />
+      <workItem from="1719016841408" duration="648000" />
+      <workItem from="1719024491092" duration="16562000" />
+      <workItem from="1719382938177" duration="128000" />
+      <workItem from="1720018368729" duration="37000" />
+      <workItem from="1729617500676" duration="220000" />
+      <workItem from="1729680277867" duration="1273000" />
+      <workItem from="1729682141579" duration="4828000" />
+      <workItem from="1729789009313" duration="594000" />
+      <workItem from="1729934131414" duration="412000" />
+      <workItem from="1729999497205" duration="13335000" />
+      <workItem from="1730112620938" duration="6339000" />
+      <workItem from="1730202858711" duration="1991000" />
+      <workItem from="1730473288619" duration="1344000" />
+      <workItem from="1730480292414" duration="4000" />
+      <workItem from="1730648140612" duration="273000" />
+      <workItem from="1731939328980" duration="12289000" />
+      <workItem from="1732014709353" duration="2885000" />
+      <workItem from="1732110489454" duration="14954000" />
+      <workItem from="1732194016210" duration="12742000" />
+      <workItem from="1733543394918" duration="11076000" />
+      <workItem from="1733659714886" duration="594000" />
+      <workItem from="1733746982236" duration="11578000" />
+      <workItem from="1733839385764" duration="3733000" />
+      <workItem from="1734022594024" duration="607000" />
+      <workItem from="1734023676196" duration="9000" />
+      <workItem from="1734365570256" duration="4494000" />
+      <workItem from="1734454003071" duration="620000" />
+      <workItem from="1734617004442" duration="10551000" />
+      <workItem from="1734718891062" duration="903000" />
+      <workItem from="1734720643018" duration="636000" />
+      <workItem from="1734799418030" duration="957000" />
+      <workItem from="1734834356289" duration="4977000" />
+      <workItem from="1734844171354" duration="895000" />
+      <workItem from="1734871017016" duration="807000" />
+    </task>
+    <task id="LOCAL-00002" summary="fixbug">
+      <option name="closed" value="true" />
+      <created>1718941715832</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718941715832</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixbug">
+      <option name="closed" value="true" />
+      <created>1718964061930</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718964061930</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixbug">
+      <option name="closed" value="true" />
+      <created>1719013430115</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719013430115</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixbug">
+      <option name="closed" value="true" />
+      <created>1719013587488</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719013587488</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixbug">
+      <option name="closed" value="true" />
+      <created>1719014628977</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719014628977</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixbug">
+      <option name="closed" value="true" />
+      <created>1719054388154</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719054388154</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixbug">
+      <option name="closed" value="true" />
+      <created>1719383024792</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719383024792</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update code home">
+      <option name="closed" value="true" />
+      <created>1730002425092</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730002425092</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update code">
+      <option name="closed" value="true" />
+      <created>1731956781347</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731956781348</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update code">
+      <option name="closed" value="true" />
+      <created>1732209399496</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732209399496</updated>
+    </task>
+    <task id="LOCAL-00012" summary="config gmail">
+      <option name="closed" value="true" />
+      <created>1732210368312</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732210368312</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update code">
+      <option name="closed" value="true" />
+      <created>1734374222088</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1734374222089</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update code">
+      <option name="closed" value="true" />
+      <created>1734799769431</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734799769431</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update code">
+      <option name="closed" value="true" />
+      <created>1734871093229</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734871093229</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update code">
+      <option name="closed" value="true" />
+      <created>1734871620991</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734871620991</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge branch" />
+    <MESSAGE value="fixbug" />
+    <MESSAGE value="update code home" />
+    <MESSAGE value="config gmail" />
+    <MESSAGE value="init dockerfile" />
+    <MESSAGE value="init dockerfile" />
+    <MESSAGE value="update code" />
+    <option name="LAST_COMMIT_MESSAGE" value="update code" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/controllers/DoctorController.php</url>
+          <line>86</line>
+          <properties>
+            <option name="className" value="\DoctorController" />
+            <option name="methodName" value="add" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,154 @@
+CREATE TABLE VAITRO (
+    MaVaiTro INT  PRIMARY KEY,
+    TenVaiTro VARCHAR(50) NOT NULL,
+	VaiTro VARCHAR(50) NOT NULL
+);
+CREATE TABLE CHUCVU (
+    MaChucVu INT  PRIMARY KEY,
+    TenChucVu VARCHAR(50) NOT NULL
+);
+CREATE TABLE BACSI (
+    MaBacSi INT PRIMARY KEY,
+    HoTen VARCHAR(100) NOT NULL,
+    MaChucVu INT,
+	MaVaiTro INT,
+    SDT VARCHAR(15),
+    Email VARCHAR(100),
+    AnhDaiDien VARCHAR(250) DEFAULT NULL,
+	NgaySinh DATE DEFAULT NULL,                               
+    GioiTinh TINYINT DEFAULT NULL,                            
+    DiaChi VARCHAR(255) DEFAULT NULL,
+	TrangThai TINYINT DEFAULT 1,                              
+    NgayTao DATETIME DEFAULT CURRENT_TIMESTAMP,               
+    NgayCapNhat DATETIME DEFAULT GETDATE(),   
+	NguoiCapNhat INT NULL,
+    FOREIGN KEY (MaChucVu) REFERENCES CHUCVU(MaChucVu),
+    FOREIGN KEY (MaVaiTro) REFERENCES VAITRO(MaVaiTro)
+);
+
+CREATE TRIGGER trg_UpdateNgayCapNhat_BACSI
+ON BACSI
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE BACSI
+    SET NgayCapNhat = GETDATE()
+    FROM BACSI INNER JOIN inserted i ON BACSI.MaBacSi = i.MaBacSi;
+END;
+CREATE TABLE DICHVU (
+    MaDichVu INT IDENTITY(1,1) PRIMARY KEY,
+    TenDichVu NVARCHAR(255) NOT NULL,
+    MoTa NVARCHAR(500),
+    Gia DECIMAL(18,2),
+    TrangThai TINYINT DEFAULT 1,  
+    NgayTao DATETIME DEFAULT GETDATE(),
+	NgayCapNhat DATETIME DEFAULT GETDATE(),
+	NguoiCapNhat INT NULL
+);
+CREATE TABLE PHUTA (
+    MaPhuTa INT IDENTITY(1,1) PRIMARY KEY,
+    TenPhuTa NVARCHAR(255) NOT NULL,
+    MatKhau NVARCHAR(255) NOT NULL,
+    SDT VARCHAR(20),
+    Email NVARCHAR(255),
+    NgaySinh DATE,
+    GioiTinh BIT,
+    DiaChi NVARCHAR(255),
+    TrangThai BIT,
+    NgayTao DATETIME DEFAULT GETDATE(),
+	NgayCapNhat DATETIME DEFAULT GETDATE(),
+    NguoiCapNhat INT NULL,
+    MaChucVu INT,
+    MaVaiTro INT,
+    MaDichVu INT,
+    FOREIGN KEY (MaChucVu) REFERENCES CHUCVU(MaChucVu),
+    FOREIGN KEY (MaVaiTro) REFERENCES VAITRO(MaVaiTro),
+    FOREIGN KEY (MaDichVu) REFERENCES DICHVU(MaDichVu)
+);
+CREATE TRIGGER trg_UpdateNgayCapNhat_Phuta
+ON PHUTA
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE PHUTA
+    SET NgayCapNhat = GETDATE()
+    FROM PHUTA p
+    INNER JOIN inserted i ON p.MaPhuTa = i.MaPhuTa;
+END;
+
+
+CREATE TABLE BENHNHAN (
+    MaBN INT IDENTITY(1,1) PRIMARY KEY,
+    TenBN NVARCHAR(255) NOT NULL,
+    NgaySinh DATE,
+    MatKhau NVARCHAR(255),
+    GioiTinh BIT,
+    DiaChi NVARCHAR(255),
+    SDT VARCHAR(20),
+    Email NVARCHAR(255),
+    TrangThai BIT,
+    NgayTao DATETIME DEFAULT GETDATE(),
+	NgayCapNhat DATETIME DEFAULT GETDATE(),
+    NguoiCapNhat INT NULL
+);
+CREATE TABLE KHUNGGIOHEN (
+    MaKhungGioHen INT IDENTITY(1,1) PRIMARY KEY,
+    KhungGio NVARCHAR(50) NOT NULL
+);
+
+CREATE TABLE LICHHEN (
+    MaLichHen INT IDENTITY(1,1) PRIMARY KEY,
+    NgayvaGio DATETIME NOT NULL,
+    TenKhachHang NVARCHAR(255),
+    GioiTinh BIT,
+    NgaySinh DATE,
+    SDT VARCHAR(20),
+    Email NVARCHAR(255),
+    GhiChu NVARCHAR(500),
+    TrangThai BIT,
+    NgayTao DATETIME DEFAULT GETDATE(),
+    KetQua NVARCHAR(500),
+    MaDichVu INT,
+    MaBacSi INT,
+    MaKhungGioHen INT,
+	NgayCapNhat DATETIME DEFAULT GETDATE(),
+    NguoiCapNhat INT NULL
+    FOREIGN KEY (MaDichVu) REFERENCES DICHVU(MaDichVu),
+    FOREIGN KEY (MaBacSi) REFERENCES BACSI(MaBacSi),
+    FOREIGN KEY (MaKhungGioHen) REFERENCES KHUNGGIOHEN(MaKhungGioHen)
+);
+CREATE TRIGGER trg_UpdateNgayCapNhat_DICHVU
+ON DICHVU
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE DICHVU
+    SET NgayCapNhat = GETDATE()
+    FROM DICHVU d
+    INNER JOIN inserted i ON d.MaDichVu = i.MaDichVu;
+END;
+CREATE TRIGGER trg_UpdateNgayCapNhat_BENHNHAN
+ON BENHNHAN
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE BENHNHAN
+    SET NgayCapNhat = GETDATE()
+    FROM BENHNHAN b
+    INNER JOIN inserted i ON b.MaBN = i.MaBN;
+END;
+
+
+
+
+
+
+

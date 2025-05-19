@@ -1,0 +1,15 @@
+{
+  "name": "bav/centbeauty",
+  "description": "Cent Beauty",
+  "require": {
+    "ralouphie/getallheaders": "*",
+    "php": "^8.2",
+    "phpmailer/phpmailer": "^6.9",
+    "ext-mysqli": "*",
+    "ext-pdo": "*",
+    "cloudinary/cloudinary_php": "^2.14",
+    "spatie/async": "^1.6",
+    "ext-openssl": "*"
+  },
+  "license": "proprietary"
+}
